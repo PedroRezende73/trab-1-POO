@@ -1,24 +1,19 @@
-
 package agentespatologicos;
 
-import esqueletotrabalho.Fungo;
+import esqueletotrabalho.AgentePatologico;
 import esqueletotrabalho.Paciente;
 
 
-public class Histoplasma extends Fungo {
-    private final int energiaVital = 1000;
-    
+public class Histoplasma extends AgentePatologico{
+
     public Histoplasma(String identificacao) {
-        super(identificacao);
+        super(identificacao, 1000, "Fungo", "Histoplasma");
     }
 
-    /**
-     *
-     * @param paciente
-     */
     @Override
-    public void atacar(Paciente paciente) {
+    public void atacar(Paciente pacinete) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
+
 }

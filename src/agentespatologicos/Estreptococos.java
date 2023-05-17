@@ -1,23 +1,16 @@
-
 package agentespatologicos;
 
-import esqueletotrabalho.Bacteria;
+import esqueletotrabalho.AgentePatologico;
 import esqueletotrabalho.Paciente;
 
-
-public class Estreptococos extends Bacteria {
-    private final int energiaVital = 200;
+public class Estreptococos extends AgentePatologico{
     
     public Estreptococos(String identificacao) {
-        super(identificacao);
+        super(identificacao, 200, "Bactéria", "Estreptococos");
     }
-
-    /**
-     *
-     * @param paciente
-     */
+    
     @Override
-    public void atacar(Paciente paciente) {
+    public void atacar(Paciente pacinete) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     

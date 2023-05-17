@@ -1,24 +1,16 @@
-
 package agentespatologicos;
 
+import esqueletotrabalho.AgentePatologico;
 import esqueletotrabalho.Paciente;
-import esqueletotrabalho.Protozoario;
 
-
-public class Giardia extends Protozoario {
-
-    private final int energiaVital = 500;
+public class Giardia extends AgentePatologico{
     
     public Giardia(String identificacao) {
-        super(identificacao);
+        super(identificacao, 500, "Protozoário", "Giárdia");
     }
-
-    /**
-     *
-     * @param paciente
-     */
+    
     @Override
-    public void atacar(Paciente paciente) {
+    public void atacar(Paciente pacinete) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
