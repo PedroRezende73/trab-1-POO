@@ -8,11 +8,11 @@ package esqueletotrabalho;
  *
  * @author Usuario
  */
-public abstract class Virus extends AgentePatologico{
+public abstract class Protozoario extends AgentePatologico{
     
     public static int qtdFilhos;
 
-    public Virus(String identificacao, int energia_vital, String classe_geral, String classe_especifica) {
+    public Protozoario(String identificacao, int energia_vital, String classe_geral, String classe_especifica) {
         super(identificacao, energia_vital, classe_geral, classe_especifica);
         qtdFilhos++;
     }

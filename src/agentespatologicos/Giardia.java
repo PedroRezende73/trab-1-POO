@@ -1,9 +1,9 @@
 package agentespatologicos;
 
-import esqueletotrabalho.AgentePatologico;
+import esqueletotrabalho.Protozoario;
 import esqueletotrabalho.Paciente;
 
-public class Giardia extends AgentePatologico{
+public class Giardia extends Protozoario{
     
     public Giardia(String identificacao) {
         super(identificacao, 500, "Protozoário", "Giárdia");

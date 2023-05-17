@@ -1,9 +1,9 @@
 package agentespatologicos;
 
-import esqueletotrabalho.AgentePatologico;
+import esqueletotrabalho.Bacteria;
 import esqueletotrabalho.Paciente;
 
-public class Estreptococos extends AgentePatologico{
+public class Estreptococos extends Bacteria{
     
     public Estreptococos(String identificacao) {
         super(identificacao, 200, "Bactéria", "Estreptococos");

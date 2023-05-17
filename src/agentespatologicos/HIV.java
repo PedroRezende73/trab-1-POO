@@ -1,9 +1,9 @@
 package agentespatologicos;
 
-import esqueletotrabalho.AgentePatologico;
 import esqueletotrabalho.Paciente;
+import esqueletotrabalho.Virus;
 
-public class HIV extends AgentePatologico{
+public class HIV extends Virus{
 
     public HIV(String identificacao) {
         super(identificacao, 0, "Vírus", "HIV");

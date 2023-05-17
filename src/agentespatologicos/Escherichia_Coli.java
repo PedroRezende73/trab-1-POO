@@ -1,10 +1,10 @@
 package agentespatologicos;
 
-import esqueletotrabalho.AgentePatologico;
+import esqueletotrabalho.Bacteria;
 import esqueletotrabalho.Paciente;
 
 
-public class Escherichia_Coli extends AgentePatologico{
+public class Escherichia_Coli extends Bacteria{
 
     public Escherichia_Coli(String identificacao) {
         super(identificacao, 64, "Bactéria", "Escherichia coli");

@@ -1,10 +1,10 @@
 package agentespatologicos;
 
-import esqueletotrabalho.AgentePatologico;
+import esqueletotrabalho.Fungo;
 import esqueletotrabalho.Paciente;
 
 
-public class Histoplasma extends AgentePatologico{
+public class Histoplasma extends Fungo{
 
     public Histoplasma(String identificacao) {
         super(identificacao, 1000, "Fungo", "Histoplasma");

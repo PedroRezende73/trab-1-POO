@@ -72,7 +72,12 @@ public class Leitor {
             scan.close();
         } catch (FileNotFoundException erro) {
             System.out.println("Arquivo não encontrado");
-        } 
+        }
+        
+        System.out.println("N° de Vírus: " + Virus.getQtdFilhos());
+        System.out.println("N° de Bactérias: " + Bacteria.getQtdFilhos());
+        System.out.println("N° de Protozoários: " + Protozoario.getQtdFilhos());
+        System.out.println("N° de Fungos: " + Fungo.getQtdFilhos());
     }
     
     public void lerPaciente() {

@@ -1,10 +1,10 @@
 package agentespatologicos;
 
-import esqueletotrabalho.AgentePatologico;
+import esqueletotrabalho.Virus;
 import esqueletotrabalho.Paciente;
 
 
-public class Covid19 extends AgentePatologico{
+public class Covid19 extends Virus{
 
     public Covid19(String identificacao) {
         super(identificacao, 100, "Vírus", "COVID 19");
