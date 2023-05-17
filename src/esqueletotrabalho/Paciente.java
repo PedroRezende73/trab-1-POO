@@ -13,6 +13,22 @@ public class Paciente {
     private int hemacias;
     private int celulasT;
     private int celulasK;
+    
+    
+    public Paciente(String nome, int peso, double altura, int idade, int leucocitos, int hemacias, int celulasT, int celulasK) {
+        this.nome = nome;
+        this.peso = peso;
+        this.altura = altura;
+        this.idade = idade;
+        this.leucocitos = leucocitos;
+        this.hemacias = hemacias;
+        this.celulasT = celulasT;
+        this.celulasK = celulasK;
+    }
+    
+    public Paciente(){
+        
+    }
 
     public String getNome() {
         return nome;
@@ -78,15 +94,5 @@ public class Paciente {
         this.celulasK = celulasK;
     }
 
-    public Paciente(String nome, int peso, double altura, int idade, int leucocitos, int hemacias, int celulasT, int celulasK) {
-        this.nome = nome;
-        this.peso = peso;
-        this.altura = altura;
-        this.idade = idade;
-        this.leucocitos = leucocitos;
-        this.hemacias = hemacias;
-        this.celulasT = celulasT;
-        this.celulasK = celulasK;
-    }
 
 }

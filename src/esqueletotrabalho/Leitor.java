@@ -25,9 +25,11 @@ public class Leitor {
             FileInputStream patologico = new FileInputStream(arquivo);
             Scanner scan = new Scanner(patologico);
             while (scan.hasNext()) {
-                    int classeEspecifica = scan.nextInt();
+                int classeEspecifica = scan.nextInt();
                 String identificacao = scan.next();
-                System.out.println(classeEspecifica + " " + identificacao);
+                /*
+                 * System.out.println(classeEspecifica + " " + identificacao);
+                */
                 switch (classeEspecifica) {
                     case 1:
                         {
@@ -74,13 +76,17 @@ public class Leitor {
             System.out.println("Arquivo não encontrado");
         }
         
-        System.out.println("N° de Vírus: " + Virus.getQtdFilhos());
-        System.out.println("N° de Bactérias: " + Bacteria.getQtdFilhos());
-        System.out.println("N° de Protozoários: " + Protozoario.getQtdFilhos());
-        System.out.println("N° de Fungos: " + Fungo.getQtdFilhos());
+        int qtdVirus = Virus.getQtdFilhos(), qtdBacterias = Bacteria.getQtdFilhos(), qtdProtozoarios = Protozoario.getQtdFilhos(), qtdFungos = Fungo.getQtdFilhos();
+        
+        
+        
+        System.out.println("N° de Vírus: " + qtdVirus);
+        System.out.println("N° de Bactérias: " + qtdBacterias);
+        System.out.println("N° de Protozoários: " + qtdProtozoarios);
+        System.out.println("N° de Fungos: " + qtdFungos);
     }
     
-    public void lerPaciente() {
+    public Paciente lerPaciente() {
         try {
             FileInputStream pacienteFile = new FileInputStream(arquivo);
             Scanner scan = new Scanner(pacienteFile);
@@ -93,11 +99,14 @@ public class Leitor {
             int celulasT = scan.nextInt();
             int celulasK = scan.nextInt();
             Paciente paciente = new Paciente(nome, peso, altura, idade, leucocitos, hemacias, celulasT, celulasK);
-            System.out.println(paciente.getNome()+ "\n" + paciente.getPeso() + "\n" + paciente.getAltura() + "\n" + paciente.getIdade() + "\n" + paciente.getLeucocitos() + "\n" + paciente.getHemacias() + "\n" + paciente.getCelulasT() + "\n" + paciente.getCelulasK());
+            /*System.out.println(paciente.getNome()+ "\n" + paciente.getPeso() + "\n" + paciente.getAltura() + "\n" + paciente.getIdade() + "\n" + paciente.getLeucocitos() + "\n" + paciente.getHemacias() + "\n" + paciente.getCelulasT() + "\n" + paciente.getCelulasK());*/
             scan.close();
+            return paciente;
         } catch (FileNotFoundException erro) {
             System.out.println("Arquivo não encontrado");
         } 
+        
+        return new Paciente();
     }
 }
 
