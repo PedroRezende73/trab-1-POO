@@ -6,7 +6,7 @@ import esqueletotrabalho.Paciente;
 public class Estreptococos extends Bacteria{
     
     public Estreptococos(String identificacao) {
-        super(identificacao, 200, "Bactéria", "Estreptococos");
+        super(identificacao, 200, "Estreptococos");
     }
     
     @Override

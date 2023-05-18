@@ -12,8 +12,8 @@ public abstract class Protozoario extends AgentePatologico{
     
     public static int qtdFilhos;
 
-    public Protozoario(String identificacao, int energia_vital, String classe_geral, String classe_especifica) {
-        super(identificacao, energia_vital, classe_geral, classe_especifica);
+    public Protozoario(String identificacao, int energia_vital, String classe_especifica) {
+        super(identificacao, energia_vital, "Protozoario", classe_especifica);
         qtdFilhos++;
     }
 

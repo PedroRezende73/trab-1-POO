@@ -3,10 +3,10 @@ package esqueletotrabalho;
 
 
 public abstract class AgentePatologico {
-    private String identificacao;
+    private static String identificacao;
     private int energia_vital;
-    private String classe_geral;
-    private String classe_especifica;
+    private static String classe_geral;
+    private static String classe_especifica;
 
     public AgentePatologico(String identificacao, int energia_vital, String classe_geral, String classe_especifica) {
         this.identificacao = identificacao;
@@ -16,5 +16,11 @@ public abstract class AgentePatologico {
     }
     
     public abstract void atacar(Paciente pacinete);
+
+    public static String getClasseGeral() {
+        return classe_geral;
+    }
+
     
+
 }

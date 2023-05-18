@@ -6,7 +6,7 @@ import esqueletotrabalho.Virus;
 public class HIV extends Virus{
 
     public HIV(String identificacao) {
-        super(identificacao, 0, "Vírus", "HIV");
+        super(identificacao, 0, "HIV");
     }
 
     @Override

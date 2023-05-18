@@ -12,8 +12,8 @@ public abstract class Fungo extends AgentePatologico{
     
     public static int qtdFilhos;
 
-    public Fungo(String identificacao, int energia_vital, String classe_geral, String classe_especifica) {
-        super(identificacao, energia_vital, classe_geral, classe_especifica);
+    public Fungo(String identificacao, int energia_vital, String classe_especifica) {
+        super(identificacao, energia_vital, "Fungo", classe_especifica);
         qtdFilhos++;
     }
 

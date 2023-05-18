@@ -7,7 +7,7 @@ import esqueletotrabalho.Paciente;
 public class Histoplasma extends Fungo{
 
     public Histoplasma(String identificacao) {
-        super(identificacao, 1000, "Fungo", "Histoplasma");
+        super(identificacao, 1000, "Histoplasma");
     }
 
     @Override

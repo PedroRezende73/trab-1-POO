@@ -12,8 +12,8 @@ public abstract class Bacteria extends AgentePatologico{
     
     public static int qtdFilhos;
 
-    public Bacteria(String identificacao, int energia_vital, String classe_geral, String classe_especifica) {
-        super(identificacao, energia_vital, classe_geral, classe_especifica);
+    public Bacteria(String identificacao, int energia_vital, String classe_especifica) {
+        super(identificacao, energia_vital, "Bacteria", classe_especifica);
         qtdFilhos++;
     }
 
@@ -21,6 +21,7 @@ public abstract class Bacteria extends AgentePatologico{
         return qtdFilhos;
     }
 
+    
     
     @Override
     public void atacar(Paciente pacinete) {}

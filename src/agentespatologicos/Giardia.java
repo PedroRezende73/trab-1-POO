@@ -6,7 +6,7 @@ import esqueletotrabalho.Paciente;
 public class Giardia extends Protozoario{
     
     public Giardia(String identificacao) {
-        super(identificacao, 500, "Protozoário", "Giárdia");
+        super(identificacao, 500, "Giárdia");
     }
     
     @Override

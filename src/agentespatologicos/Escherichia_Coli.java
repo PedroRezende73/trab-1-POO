@@ -7,7 +7,7 @@ import esqueletotrabalho.Paciente;
 public class Escherichia_Coli extends Bacteria{
 
     public Escherichia_Coli(String identificacao) {
-        super(identificacao, 64, "Bactéria", "Escherichia coli");
+        super(identificacao, 64, "Escherichia coli");
     }
 
     @Override

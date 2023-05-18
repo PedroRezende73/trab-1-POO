@@ -13,14 +13,15 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Leitor {
-    private final String arquivo;
-    private final List<AgentePatologico> listaDeAgentes = new ArrayList<>();
+    private String arquivo;
+    private ArrayList<AgentePatologico> listaDeAgentes;
 
     public Leitor(String arquivo) {
         this.arquivo = arquivo;
+        this.listaDeAgentes = new ArrayList<>();
     }
-
-    public void lerPatologicos() {
+    
+    public ArrayList lerPatologicos() {
         try {
             FileInputStream patologico = new FileInputStream(arquivo);
             Scanner scan = new Scanner(patologico);
@@ -76,14 +77,7 @@ public class Leitor {
             System.out.println("Arquivo não encontrado");
         }
         
-        int qtdVirus = Virus.getQtdFilhos(), qtdBacterias = Bacteria.getQtdFilhos(), qtdProtozoarios = Protozoario.getQtdFilhos(), qtdFungos = Fungo.getQtdFilhos();
-        
-        
-        
-        System.out.println("N° de Vírus: " + qtdVirus);
-        System.out.println("N° de Bactérias: " + qtdBacterias);
-        System.out.println("N° de Protozoários: " + qtdProtozoarios);
-        System.out.println("N° de Fungos: " + qtdFungos);
+        return listaDeAgentes;
     }
     
     public Paciente lerPaciente() {
@@ -108,5 +102,6 @@ public class Leitor {
         
         return new Paciente();
     }
+    
 }
 

@@ -27,7 +27,6 @@ public class Paciente {
     }
     
     public Paciente(){
-        
     }
 
     public String getNome() {

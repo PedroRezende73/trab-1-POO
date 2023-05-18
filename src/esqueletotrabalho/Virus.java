@@ -12,10 +12,12 @@ public abstract class Virus extends AgentePatologico{
     
     public static int qtdFilhos;
 
-    public Virus(String identificacao, int energia_vital, String classe_geral, String classe_especifica) {
-        super(identificacao, energia_vital, classe_geral, classe_especifica);
+    public Virus(String identificacao, int energia_vital, String classe_especifica) {
+        super(identificacao, energia_vital, "Vírus", classe_especifica);
         qtdFilhos++;
     }
+    
+    
 
     public static int getQtdFilhos() {
         return qtdFilhos;
