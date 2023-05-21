@@ -1,5 +1,6 @@
 package agentespatologicos;
 
+import esqueletotrabalho.AgentePatologico;
 import esqueletotrabalho.Protozoario;
 import esqueletotrabalho.Paciente;
 
@@ -9,9 +10,21 @@ public class Giardia extends Protozoario{
         super(identificacao, 500, "Giárdia");
     }
     
-    @Override
-    public void atacar(Paciente pacinete) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void atacar(Paciente paciente, AgentePatologico giardia) {
+        /*
+        O ataque da Giárdia retira 8 células T e 9 células K. Se o número de hemárcias for 2
+        ou mais vezes o número de leucócitos a Giárdia recupera 50 unidades de energia
+        vital.
+        */
+        
+        // Ataque da Giardia
+        paciente.setCelulasT(paciente.getCelulasT() - 8);
+        paciente.setCelulasK(paciente.getCelulasK() - 9);
+        
+        // Recupearar energia vital
+        if (paciente.getHemacias() >= paciente.getLeucocitos() * 2){
+           giardia.setEnergia_vital(giardia.getEnergia_vital() + 50);
+        }
     }
     
 }

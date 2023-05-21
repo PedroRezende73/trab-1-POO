@@ -9,12 +9,11 @@ import agentespatologicos.Estreptococos;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Leitor {
-    private String arquivo;
-    private ArrayList<AgentePatologico> listaDeAgentes;
+    private final String arquivo;
+    public ArrayList<AgentePatologico> listaDeAgentes;
 
     public Leitor(String arquivo) {
         this.arquivo = arquivo;

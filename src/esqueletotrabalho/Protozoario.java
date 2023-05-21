@@ -23,6 +23,6 @@ public abstract class Protozoario extends AgentePatologico{
 
     
     @Override
-    public void atacar(Paciente pacinete) {}
+    public void atacar(Paciente paciente) {}
     
 }

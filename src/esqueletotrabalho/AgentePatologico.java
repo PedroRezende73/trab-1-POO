@@ -1,7 +1,6 @@
 
 package esqueletotrabalho;
 
-
 public abstract class AgentePatologico {
     private static String identificacao;
     private int energia_vital;
@@ -14,9 +13,21 @@ public abstract class AgentePatologico {
         this.classe_geral = classe_geral;
         this.classe_especifica = classe_especifica;
     }
-    
-    public abstract void atacar(Paciente pacinete);
 
+    public static String getIdentificacao() {
+        return identificacao;
+    }
+
+    public int getEnergia_vital() {
+        return energia_vital;
+    }
+
+    public void setEnergia_vital(int energia_vital) {
+        this.energia_vital = energia_vital;
+    }
+    
+    public abstract void atacar(Paciente paciente);
+       
     public static String getClasseGeral() {
         return classe_geral;
     }

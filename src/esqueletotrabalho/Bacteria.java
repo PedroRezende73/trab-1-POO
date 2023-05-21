@@ -24,6 +24,6 @@ public abstract class Bacteria extends AgentePatologico{
     
     
     @Override
-    public void atacar(Paciente pacinete) {}
+    public void atacar(Paciente paciente) {}
     
 }

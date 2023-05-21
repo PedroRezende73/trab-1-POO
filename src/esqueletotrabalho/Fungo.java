@@ -23,6 +23,6 @@ public abstract class Fungo extends AgentePatologico{
 
     
     @Override
-    public void atacar(Paciente pacinete) {}
+    public void atacar(Paciente paciente) {}
     
 }

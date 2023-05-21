@@ -1,6 +1,3 @@
-
-
-
 package esqueletotrabalho;
 
 
@@ -9,11 +6,10 @@ public class Paciente {
     private int peso;
     private double altura;
     private int idade;
-    private int leucocitos;
-    private int hemacias;
-    private int celulasT;
+    protected int leucocitos;
+    protected int hemacias;
+    protected int celulasT;
     private int celulasK;
-    
     
     public Paciente(String nome, int peso, double altura, int idade, int leucocitos, int hemacias, int celulasT, int celulasK) {
         this.nome = nome;
@@ -93,5 +89,8 @@ public class Paciente {
         this.celulasK = celulasK;
     }
 
+    public void contra_ataque(){
+    
+    }
 
 }
