@@ -4,8 +4,7 @@
  */
 package classeGeral;
 
-import basics.AgentePatologico;
-import basics.Paciente;
+import basics.*;
 
 /**
  *

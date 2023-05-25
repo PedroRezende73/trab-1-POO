@@ -89,8 +89,18 @@ public class Paciente {
         this.celulasK = celulasK;
     }
 
-    public void contra_ataque(){
+    public void contraAtaque(AgentePatologico agente){
+        int dano;
+        dano = (int) (this.leucocitos/(this.peso*this.altura*this.idade));
+        agente.setEnergiaVital(agente.getEnergiaVital() - dano);
+    }
     
+    public int taVivo(){
+        if (this.getLeucocitos() <= 0 || this.getHemacias() <= 0 || this.getCelulasT() <= 0 || this.getCelulasT() <= 0) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 
 }

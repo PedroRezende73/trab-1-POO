@@ -23,7 +23,7 @@ public class Giardia extends Protozoario{
         
         // Recupearar energia vital
         if (paciente.getHemacias() >= paciente.getLeucocitos() * 2){
-           giardia.setEnergia_vital(giardia.getEnergia_vital() + 50);
+           giardia.setEnergiaVital(giardia.getEnergiaVital() + 50);
         }
     }
     

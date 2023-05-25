@@ -28,7 +28,7 @@ public class Escherichia_Coli extends Bacteria {
         paciente.setCelulasT(paciente.getCelulasT() - 1);
         
         // Criação de duas Escherichia_Coli apos sua morte 
-        if (escherichia_coli.getEnergia_vital() == 0) {
+        if (escherichia_coli.getEnergiaVital() == 0) {
             
             // Criação de um objeto random da classe java.util.Random para obter numeros aleatorios  
             Random random = new Random();
@@ -39,9 +39,9 @@ public class Escherichia_Coli extends Bacteria {
             
             // Criação das filhas da Escherichia_Coli após sua morte dividindo sua energia vital por 2 para obter metade da energia vital
             AgentePatologico filha1 = new Escherichia_Coli("filha1");
-            filha1.setEnergia_vital(filha1.getEnergia_vital() / 2);
+            filha1.setEnergiaVital(filha1.getEnergiaVital() / 2);
             AgentePatologico filha2 = new Escherichia_Coli("filha2");
-            filha2.setEnergia_vital(filha2.getEnergia_vital() / 2);
+            filha2.setEnergiaVital(filha2.getEnergiaVital() / 2);
             
             // Adicionando as duas filhas em index aleatorios gerados pelo random a lista 
             listaDeAgentes.add(index1, filha1);

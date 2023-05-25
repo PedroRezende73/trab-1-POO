@@ -1,7 +1,5 @@
 package basics;
 
-import basics.Paciente;
-import basics.AgentePatologico;
 import classeEspecifica.HIV;
 import classeEspecifica.Covid19;
 import classeEspecifica.Giardia;
@@ -36,41 +34,48 @@ public class Leitor {
                     case 1:
                         {
                             AgentePatologico agentePatologico = new HIV (identificacao);
+                            //System.out.println(agentePatologico.getIdentificacao());
                             listaDeAgentes.add(agentePatologico);
                             break;
                         }
                     case 2:
                         {
                             AgentePatologico agentePatologico = new Estreptococos (identificacao);
+                            //System.out.println(agentePatologico.getIdentificacao());
                             listaDeAgentes.add(agentePatologico);
                             break;
                         }
                     case 3:
                         {
                             AgentePatologico agentePatologico = new Giardia (identificacao);
+                            //System.out.println(agentePatologico.getIdentificacao());
                             listaDeAgentes.add(agentePatologico);
                             break;
                         }
                     case 4:
                         {
                             AgentePatologico agentePatologico = new Covid19 (identificacao);
+                            //System.out.println(agentePatologico.getIdentificacao());
                             listaDeAgentes.add(agentePatologico);
                             break;
                         }
                     case 5:
                         {
                             AgentePatologico agentePatologico = new Histoplasma (identificacao);
+                            //System.out.println(agentePatologico.getIdentificacao());
                             listaDeAgentes.add(agentePatologico);
                             break;
                         }
                     case 6:
                         {
                             AgentePatologico agentePatologico = new Escherichia_Coli (identificacao);
+                            //System.out.println(agentePatologico.getIdentificacao());
                             listaDeAgentes.add(agentePatologico);
                             break;
                         }
                     default:
                         break;
+                        
                 }
             }
             scan.close();

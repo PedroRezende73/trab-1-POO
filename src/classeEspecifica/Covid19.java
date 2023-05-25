@@ -32,7 +32,6 @@ public class Covid19 extends Virus{
             paciente.setHemacias(paciente.getHemacias() - 15);
             
             // Implementar um contra ataque para classe paciente
-            paciente.contra_ataque();
         }
     }  
 }
