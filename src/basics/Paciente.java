@@ -90,16 +90,20 @@ public class Paciente {
     }
 
     public void contraAtaque(AgentePatologico agente){
-        int dano;
-        dano = (int) (this.leucocitos/(this.peso*this.altura*this.idade));
-        agente.setEnergiaVital(agente.getEnergiaVital() - dano);
+        double dano;
+        //System.out.println(this.getIdade());
+        dano = (this.getLeucocitos()/(this.getPeso()*this.getAltura()*this.getIdade()));
+        agente.setEnergiaVital((int) (agente.getEnergiaVital() - dano));
+        
+        //if(agente.getEnergiaVital()<= 0) System.out.println(agente.getEnergiaVital());
     }
     
     public int taVivo(){
         if (this.getLeucocitos() <= 0 || this.getHemacias() <= 0 || this.getCelulasT() <= 0 || this.getCelulasT() <= 0) {
-            return 1;
-        } else {
             return 0;
+
+        } else {
+            return 1;
         }
     }
 

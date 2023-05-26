@@ -26,6 +26,10 @@ public abstract class AgentePatologico {
         return this.classe_geral;
     }
 
+    public String getClasseEspecifica() {
+        return classe_especifica;
+    }
+    
     public void setEnergiaVital(int energia_vital) {
         this.energia_vital = energia_vital;
     }
