@@ -4,10 +4,6 @@
  */
 package basics;
 
-import classeGeral.Protozoario;
-import classeGeral.Virus;
-import classeGeral.Fungo;
-import classeGeral.Bacteria;
 import java.util.LinkedList;
 import java.util.HashMap;
 import java.util.Map;

@@ -18,10 +18,10 @@ public class Trabalho {
         paciente = leitorPaciente.lerPaciente();
         
         LinkedList<Object[]> patologias = new LinkedList<>();
-        patologias.add(new Object[]{"Vírus", Virus.getQtdFilhos()});
-        patologias.add(new Object[]{"Bactérias", Bacteria.getQtdFilhos()});
+        patologias.add(new Object[]{"Virus", Virus.getQtdFilhos()});
+        patologias.add(new Object[]{"Bacterias", Bacteria.getQtdFilhos()});
         patologias.add(new Object[]{"Fungos", Fungo.getQtdFilhos()});
-        patologias.add(new Object[]{"Protozoários", Protozoario.getQtdFilhos()});
+        patologias.add(new Object[]{"Protozoarios", Protozoario.getQtdFilhos()});
         
         System.out.println(Utils.obterClassesMaisInstanciadas(patologias));
 

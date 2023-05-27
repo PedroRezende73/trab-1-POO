@@ -12,11 +12,13 @@ public class Acao {
     
     public static void atacar(Paciente paciente, LinkedList<AgentePatologico> arrAgentes){
         AgentePatologico agenteP = null;
+        LinkedList<AgentePatologico> agentesCopiados = new LinkedList<>(arrAgentes); 
+        //Essa lista é uma cópia da lista original.
         do {
             qtdDias++;
             
-            Iterator<AgentePatologico> iterator = arrAgentes.iterator();
-            
+            Iterator<AgentePatologico> iterator = agentesCopiados.iterator();
+            //a intenção é trabalhar com a lista copiada durante o loop para evitar a exceção.
             while (iterator.hasNext()) {
                 AgentePatologico agente = iterator.next();
                 
