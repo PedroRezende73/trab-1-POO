@@ -14,7 +14,7 @@ public class Histoplasma extends Fungo {
     }
 
     @Override
-    public void atacar(Paciente paciente, LinkedList<AgentePatologico> listaDeAgentes) {
+    public LinkedList atacar(Paciente paciente, LinkedList<AgentePatologico> listaDeAgentes) {
         /*
         O Histoplasma ataca apenas hemárcias, matando 50 hemárcias no ataque. Além
         disso, se estiverem do lado de uma Bactéria na fila, essa é eliminada. Esse verificação
@@ -34,21 +34,22 @@ public class Histoplasma extends Fungo {
         int posicao = 0;
         while(iterator.hasNext()){
             
+            AgentePatologico agente = iterator.next();
+            
             // Verifica se existe bacteria antes na fila 
-            if (index - 1 == posicao &&  iterator.next() instanceof Bacteria) {
-                iterator.remove(); 
-                System.out.println("bacteria antes dele removida");
+            if (index - 1 == posicao &&  agente instanceof Bacteria) {
+                agente.setEnergiaVital(0); 
             }
-
+            
             // Verifica se existe bacteria depois na fila
-            if (index + 1 == posicao &&  iterator.next() instanceof Bacteria) {
-                iterator.remove(); 
+            if (index + 1 == posicao &&  agente instanceof Bacteria) {
+                agente.setEnergiaVital(0); 
             }
             posicao++;
         }
 
         
-        
+        return listaDeAgentes;
     }
 
 }

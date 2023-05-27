@@ -25,7 +25,7 @@ public abstract class Bacteria extends AgentePatologico{
     }
 
     @Override
-    public abstract void atacar(Paciente paciente, LinkedList<AgentePatologico> listaDeAgentes);
+    public abstract LinkedList atacar(Paciente paciente, LinkedList<AgentePatologico> listaDeAgentes);
 
   
     

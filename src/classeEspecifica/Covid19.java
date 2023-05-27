@@ -12,7 +12,7 @@ public class Covid19 extends Virus {
     }
 
     @Override
-    public void atacar(Paciente paciente, LinkedList<AgentePatologico> listaDeAgentes) {
+    public LinkedList atacar(Paciente paciente, LinkedList<AgentePatologico> listaDeAgentes) {
         /*
         O COVID19 elimina 10 leucócitos, 2 células T e 15 hemárcias. Se o número de
         hemárcias ficar menor que 200, o COVID19 promove um segundo ataque (antes de ir
@@ -35,5 +35,7 @@ public class Covid19 extends Virus {
             // Implementar um contra ataque para classe paciente
             paciente.contraAtaque(this);
         }
+        
+        return listaDeAgentes;
     }
 }

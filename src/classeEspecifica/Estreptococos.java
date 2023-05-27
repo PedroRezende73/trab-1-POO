@@ -12,7 +12,7 @@ public class Estreptococos extends Bacteria {
     }
 
     @Override
-  public void atacar(Paciente paciente, LinkedList<AgentePatologico> listaDeAgentes) {
+  public LinkedList atacar(Paciente paciente, LinkedList<AgentePatologico> listaDeAgentes) {
         /*
         Quando ataca, o Estreptococos diminui a quantidade de hemárcias do paciente em 10
         unidades e de células K em 3 unidades. Imediatamente antes de seu ataque, se
@@ -44,5 +44,6 @@ public class Estreptococos extends Bacteria {
             // Adiciona o filho ao final da lista de agentes
             listaDeAgentes.add(filho);
         }
+        return listaDeAgentes;
     }
 }

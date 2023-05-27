@@ -12,7 +12,7 @@ public class Giardia extends Protozoario{
     }
     
     @Override
-    public void atacar(Paciente paciente, LinkedList<AgentePatologico> listaDeAgentes) {
+    public LinkedList atacar(Paciente paciente, LinkedList<AgentePatologico> listaDeAgentes) {
         /*
         O ataque da Giárdia retira 8 células T e 9 células K. Se o número de hemárcias for 2
         ou mais vezes o número de leucócitos a Giárdia recupera 50 unidades de energia
@@ -27,6 +27,8 @@ public class Giardia extends Protozoario{
         if (paciente.getHemacias() >= paciente.getLeucocitos() * 2){
            this.setEnergiaVital(this.getEnergiaVital() + 50);
         }
+        
+        return listaDeAgentes;
     }
     
 }

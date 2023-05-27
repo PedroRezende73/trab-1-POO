@@ -16,12 +16,9 @@ public class Acao {
             qtdDias++;
             
             Iterator<AgentePatologico> iterator = arrAgentes.iterator();
-
             
             while (iterator.hasNext()) {
                 AgentePatologico agente = iterator.next();
-                
-                System.out.println(agente.getClasseEspecifica());
                 
                 agente.atacar(paciente, arrAgentes);
                 

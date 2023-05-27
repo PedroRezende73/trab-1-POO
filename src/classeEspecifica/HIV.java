@@ -12,7 +12,7 @@ public class HIV extends Virus {
     }
 
     @Override
-    public void atacar(Paciente paciente, LinkedList<AgentePatologico> listaDeAgentes) {
+    public LinkedList atacar(Paciente paciente, LinkedList<AgentePatologico> listaDeAgentes) {
              /*
         Quando ataca o HIV diminui a quantidade de leucócitos do paciente em 10 unidades,
         de células K em 5 unidades e de células T em 3 unidades. A reação do paciente não os
@@ -24,6 +24,7 @@ public class HIV extends Virus {
        paciente.setCelulasK(paciente.getCelulasK() - 5);
        paciente.setCelulasT(paciente.getCelulasT() - 3);  
        
+       return listaDeAgentes;
        // Ele não irá morrer quando sua energia vital chegar a 0 irá ser implementado essa restrição após a criação da movimentação da lista 
     }
     
