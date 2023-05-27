@@ -3,7 +3,7 @@ package classeEspecifica;
 import basics.AgentePatologico;
 import classeGeral.Bacteria;
 import basics.Paciente;
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Estreptococos extends Bacteria {
 
@@ -11,7 +11,8 @@ public class Estreptococos extends Bacteria {
         super(identificacao, 200, "Estreptococos");
     }
 
-  public void atacar(Paciente paciente, ArrayList<AgentePatologico> listaDeAgentes) {
+    @Override
+  public void atacar(Paciente paciente, LinkedList<AgentePatologico> listaDeAgentes) {
         /*
         Quando ataca, o Estreptococos diminui a quantidade de hemárcias do paciente em 10
         unidades e de células K em 3 unidades. Imediatamente antes de seu ataque, se

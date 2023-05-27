@@ -3,6 +3,7 @@ package classeEspecifica;
 import basics.AgentePatologico;
 import classeGeral.Protozoario;
 import basics.Paciente;
+import java.util.LinkedList;
 
 public class Giardia extends Protozoario{
     
@@ -10,7 +11,8 @@ public class Giardia extends Protozoario{
         super(identificacao, 500, "Giárdia");
     }
     
-    public void atacar(Paciente paciente, AgentePatologico giardia) {
+    @Override
+    public void atacar(Paciente paciente, LinkedList<AgentePatologico> listaDeAgentes) {
         /*
         O ataque da Giárdia retira 8 células T e 9 células K. Se o número de hemárcias for 2
         ou mais vezes o número de leucócitos a Giárdia recupera 50 unidades de energia
@@ -23,7 +25,7 @@ public class Giardia extends Protozoario{
         
         // Recupearar energia vital
         if (paciente.getHemacias() >= paciente.getLeucocitos() * 2){
-           giardia.setEnergiaVital(giardia.getEnergiaVital() + 50);
+           this.setEnergiaVital(this.getEnergiaVital() + 50);
         }
     }
     

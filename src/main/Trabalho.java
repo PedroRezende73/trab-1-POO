@@ -2,13 +2,13 @@ package main;
 
 import basics.*;
 import classeGeral.*;
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 
 public class Trabalho {
 
     public static void main(String[] args) {
-        ArrayList <AgentePatologico> listaAgentes;
+        LinkedList <AgentePatologico> listaAgentes;
         Paciente paciente;
         
         Leitor leitorPatologicos = new Leitor("patologicos.txt");
@@ -17,7 +17,7 @@ public class Trabalho {
         Leitor leitorPaciente = new Leitor("paciente.txt");
         paciente = leitorPaciente.lerPaciente();
         
-        ArrayList<Object[]> patologias = new ArrayList<>();
+        LinkedList<Object[]> patologias = new LinkedList<>();
         patologias.add(new Object[]{"Vírus", Virus.getQtdFilhos()});
         patologias.add(new Object[]{"Bactérias", Bacteria.getQtdFilhos()});
         patologias.add(new Object[]{"Fungos", Fungo.getQtdFilhos()});

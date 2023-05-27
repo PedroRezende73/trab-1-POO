@@ -8,19 +8,20 @@ import classeEspecifica.Escherichia_Coli;
 import classeEspecifica.Estreptococos;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
+//import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Leitor {
     private final String arquivo;
-    public ArrayList<AgentePatologico> listaDeAgentes;
+    public LinkedList<AgentePatologico> listaDeAgentes;
 
     public Leitor(String arquivo) {
         this.arquivo = arquivo;
-        this.listaDeAgentes = new ArrayList<>();
+        this.listaDeAgentes = new LinkedList<>();
     }
     
-    public ArrayList lerPatologicos() {
+    public LinkedList lerPatologicos() {
         try {
             FileInputStream patologico = new FileInputStream(arquivo);
             Scanner scan = new Scanner(patologico);

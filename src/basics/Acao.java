@@ -1,10 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package basics;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Iterator;
 
 /**
@@ -14,17 +10,20 @@ import java.util.Iterator;
 public class Acao {
     private static int qtdDias = 0;
     
-    public static void atacar(Paciente paciente, ArrayList<AgentePatologico> arrAgentes){
+    public static void atacar(Paciente paciente, LinkedList<AgentePatologico> arrAgentes){
         AgentePatologico agenteP = null;
         do {
             qtdDias++;
-
+            
             Iterator<AgentePatologico> iterator = arrAgentes.iterator();
+
             
             while (iterator.hasNext()) {
                 AgentePatologico agente = iterator.next();
                 
-                agente.atacar(paciente);
+                System.out.println(agente.getClasseEspecifica());
+                
+                agente.atacar(paciente, arrAgentes);
                 
                 if(paciente.taVivo() == 1){
                     paciente.contraAtaque(agente);
@@ -34,11 +33,10 @@ public class Acao {
                     System.out.println("O paciente morre em " + Acao.getQtdDias() + " dias");
                     System.out.println("O último agente patológico foi "+agente.getIdentificacao());
 
-                            
                     return;
                 }
                 
-                if (agente.getEnergiaVital() <= 0 && agente.getClasseEspecifica() != "HIV") {
+                if (agente.getEnergiaVital() <= 0 && !"HIV".equals(agente.getClasseEspecifica())) {
                     iterator.remove();
                 }
             }
@@ -55,10 +53,4 @@ public class Acao {
     public static int getQtdDias() {
         return qtdDias;
     }
-
-    
-    
-    
-    
-    
 }

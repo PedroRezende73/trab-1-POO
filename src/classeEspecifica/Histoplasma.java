@@ -4,7 +4,8 @@ import basics.AgentePatologico;
 import classeGeral.Bacteria;
 import classeGeral.Fungo;
 import basics.Paciente;
-import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
 
 public class Histoplasma extends Fungo {
 
@@ -12,7 +13,8 @@ public class Histoplasma extends Fungo {
         super(identificacao, 1000, "Histoplasma");
     }
 
-    public void atacar(Paciente paciente, ArrayList<AgentePatologico> listaDeAgentes) {
+    @Override
+    public void atacar(Paciente paciente, LinkedList<AgentePatologico> listaDeAgentes) {
         /*
         O Histoplasma ataca apenas hemárcias, matando 50 hemárcias no ataque. Além
         disso, se estiverem do lado de uma Bactéria na fila, essa é eliminada. Esse verificação
@@ -27,14 +29,26 @@ public class Histoplasma extends Fungo {
         // Índice do Histoplasma atual na lista
         int index = listaDeAgentes.indexOf(this); 
         
-        // Verifica se existe bacteria antes na fila 
-        if (index > 0 && listaDeAgentes.get(index - 1) instanceof Bacteria) {
-            listaDeAgentes.remove(index - 1); 
+        Iterator<AgentePatologico> iterator = listaDeAgentes.iterator();
+                
+        int posicao = 0;
+        while(iterator.hasNext()){
+            
+            // Verifica se existe bacteria antes na fila 
+            if (index - 1 == posicao &&  iterator.next() instanceof Bacteria) {
+                iterator.remove(); 
+                System.out.println("bacteria antes dele removida");
+            }
+
+            // Verifica se existe bacteria depois na fila
+            if (index + 1 == posicao &&  iterator.next() instanceof Bacteria) {
+                iterator.remove(); 
+            }
+            posicao++;
         }
-        // Verifica se existe bacteria depois na fila
-        if (index < listaDeAgentes.size() - 1 && listaDeAgentes.get(index + 1) instanceof Bacteria) {
-            listaDeAgentes.remove(index + 1); 
-        }
+
+        
+        
     }
 
 }

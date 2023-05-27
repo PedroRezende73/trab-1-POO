@@ -8,7 +8,7 @@ import classeGeral.Protozoario;
 import classeGeral.Virus;
 import classeGeral.Fungo;
 import classeGeral.Bacteria;
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,7 +18,7 @@ import java.util.Map;
  */
 public class Utils {
     
-    public static String obterClassesMaisInstanciadas(ArrayList<Object[]> patologias) {
+    public static String obterClassesMaisInstanciadas(LinkedList<Object[]> patologias) {
         Map<String, Integer> contador = new HashMap<>();
         int maxQuantidade = 0;
 
