@@ -1,7 +1,9 @@
 package classeEspecifica;
 
+import basics.AgentePatologico;
 import basics.Paciente;
 import classeGeral.Virus;
+import java.util.ArrayList;
 
 public class HIV extends Virus {
 
@@ -10,8 +12,8 @@ public class HIV extends Virus {
     }
 
     @Override
-    public void atacar(Paciente paciente) {
-        /*
+    public void atacar(Paciente paciente, ArrayList<AgentePatologico> listaDeAgentes) {
+             /*
         Quando ataca o HIV diminui a quantidade de leucócitos do paciente em 10 unidades,
         de células K em 5 unidades e de células T em 3 unidades. A reação do paciente não os
         afeta, ou seja, um HIV não morre quando sua energia vital chega a 0 (o paciente
@@ -25,4 +27,5 @@ public class HIV extends Virus {
        
        // Ele não irá morrer quando sua energia vital chegar a 0 irá ser implementado essa restrição após a criação da movimentação da lista 
     }
+    
 }

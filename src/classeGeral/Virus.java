@@ -5,6 +5,7 @@
 package classeGeral;
 
 import basics.*;
+import java.util.ArrayList;
 
 /**
  *
@@ -26,7 +27,7 @@ public abstract class Virus extends AgentePatologico{
     }
 
     
+
     @Override
-    public void atacar(Paciente paciente) {}
-    
+    public abstract void atacar(Paciente paciente, ArrayList<AgentePatologico> listaDeAgentes);
 }

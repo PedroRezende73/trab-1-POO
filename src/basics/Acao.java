@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package basics;
 
 import java.util.ArrayList;
@@ -24,7 +20,7 @@ public class Acao {
             while (iterator.hasNext()) {
                 AgentePatologico agente = iterator.next();
                 
-                agente.atacar(paciente);
+                agente.atacar(paciente, arrAgentes);
                 
                 if(paciente.taVivo() == 1){
                     paciente.contraAtaque(agente);
@@ -38,7 +34,7 @@ public class Acao {
                     return;
                 }
                 
-                if (agente.getEnergiaVital() <= 0 && agente.getClasseEspecifica() != "HIV") {
+                if (agente.getEnergiaVital() <= 0 && !"HIV".equals(agente.getClasseEspecifica())) {
                     iterator.remove();
                 }
             }
@@ -55,10 +51,4 @@ public class Acao {
     public static int getQtdDias() {
         return qtdDias;
     }
-
-    
-    
-    
-    
-    
 }

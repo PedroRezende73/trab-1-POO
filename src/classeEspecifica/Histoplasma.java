@@ -12,6 +12,7 @@ public class Histoplasma extends Fungo {
         super(identificacao, 1000, "Histoplasma");
     }
 
+    @Override
     public void atacar(Paciente paciente, ArrayList<AgentePatologico> listaDeAgentes) {
         /*
         O Histoplasma ataca apenas hemárcias, matando 50 hemárcias no ataque. Além

@@ -1,6 +1,8 @@
 
 package basics;
 
+import java.util.ArrayList;
+
 public abstract class AgentePatologico {
     private String identificacao;
     private int energia_vital;
@@ -34,10 +36,7 @@ public abstract class AgentePatologico {
         this.energia_vital = energia_vital;
     }
     
-    public abstract void atacar(Paciente paciente);
+    public abstract void atacar(Paciente paciente, ArrayList<AgentePatologico> listaDeAgentes);
        
-
-
-    
 
 }

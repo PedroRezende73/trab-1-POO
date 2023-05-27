@@ -11,6 +11,7 @@ public class Estreptococos extends Bacteria {
         super(identificacao, 200, "Estreptococos");
     }
 
+    @Override
   public void atacar(Paciente paciente, ArrayList<AgentePatologico> listaDeAgentes) {
         /*
         Quando ataca, o Estreptococos diminui a quantidade de hemárcias do paciente em 10
