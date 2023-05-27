@@ -17,7 +17,6 @@ public class HIV extends Virus {
         afeta, ou seja, um HIV não morre quando sua energia vital chega a 0 (o paciente
         sempre perde no caso de haver um agente patológico do tipo HIV).
         */
-        
        // Ataques do HIV
        paciente.setLeucocitos(paciente.getLeucocitos() - 10);
        paciente.setCelulasK(paciente.getCelulasK() - 5);
