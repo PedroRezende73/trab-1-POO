@@ -72,6 +72,35 @@ public class Acao {
         }
         
     }
+    
+    public static void obterClassesMaisInstanciadas(int bacteria, int fungo, int protozoario, int virus){
+        int maior = bacteria;
+        String valores = "Bacterias";
+
+        if (fungo > maior) {
+            maior = fungo;
+            valores = "Fungos";
+        } else if (fungo == maior) {
+            valores += ", Fungos";
+        }
+
+        if (protozoario > maior) {
+            maior = protozoario;
+            valores = "Protozoários";
+        } else if (protozoario == maior) {
+            valores += ", Protozoários";
+        }
+
+        if (virus > maior) {
+            maior = virus;
+            valores = "Vírus";
+        } else if (virus == maior) {
+            valores += ", Vírus";
+        }
+
+        System.out.println("As classes que mais aparecem - " + maior + " indivíduos - são " + valores);
+
+    }
 
     public static int getQtdDias() {
         return qtdDias;

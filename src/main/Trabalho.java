@@ -17,23 +17,9 @@ public class Trabalho {
         Leitor leitorPaciente = new Leitor("paciente.txt");
         paciente = leitorPaciente.lerPaciente();
         
-        LinkedList<Object[]> patologias = new LinkedList<>();
-        patologias.add(new Object[]{"Virus", Virus.getQtdFilhos()});
-        patologias.add(new Object[]{"Bacterias", Bacteria.getQtdFilhos()});
-        patologias.add(new Object[]{"Fungos", Fungo.getQtdFilhos()});
-        patologias.add(new Object[]{"Protozoarios", Protozoario.getQtdFilhos()});
-        
-        System.out.println(Utils.obterClassesMaisInstanciadas(patologias));
+        Acao.obterClassesMaisInstanciadas(Bacteria.getQtdFilhos(), Fungo.getQtdFilhos(), Protozoario.getQtdFilhos(), Virus.getQtdFilhos());
 
         Acao.iniciarBatalha(paciente, listaAgentes);
-
-        /*
-        System.out.println(paciente.getLeucocitos());
-        System.out.println(paciente.getHemacias());
-        System.out.println(paciente.getCelulasT());
-        System.out.println(paciente.getCelulasK());
-        */
-    
     }
 
 }
