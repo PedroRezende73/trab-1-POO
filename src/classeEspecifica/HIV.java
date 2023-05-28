@@ -12,20 +12,20 @@ public class HIV extends Virus {
     }
 
     @Override
-    public LinkedList atacar(Paciente paciente, LinkedList<AgentePatologico> listaDeAgentes) {
-             /*
-        Quando ataca o HIV diminui a quantidade de leucócitos do paciente em 10 unidades,
-        de células K em 5 unidades e de células T em 3 unidades. A reação do paciente não os
-        afeta, ou seja, um HIV não morre quando sua energia vital chega a 0 (o paciente
-        sempre perde no caso de haver um agente patológico do tipo HIV).
-        */
-       // Ataques do HIV
+    public void atacar(Paciente paciente, LinkedList<AgentePatologico> listaDeAgentes) {
        paciente.setLeucocitos(paciente.getLeucocitos() - 10);
        paciente.setCelulasK(paciente.getCelulasK() - 5);
-       paciente.setCelulasT(paciente.getCelulasT() - 3);  
+       paciente.setCelulasT(paciente.getCelulasT() - 3);
        
-       return listaDeAgentes;
-       // Ele não irá morrer quando sua energia vital chegar a 0 irá ser implementado essa restrição após a criação da movimentação da lista 
+        if(paciente.taVivo()){
+            paciente.contraAtaque(this);
+        }
+       
     }
     
+    @Override
+    public void morrer(LinkedList<AgentePatologico> listaDeAgentes) {
+        //Output para teste;
+        System.out.println("Menos eu que sou o Vírus da HIV");
+    }
 }

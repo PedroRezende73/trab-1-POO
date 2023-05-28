@@ -24,9 +24,4 @@ public abstract class Protozoario extends AgentePatologico{
         return qtdFilhos;
     }
 
-    
-
-    @Override
-    public abstract LinkedList atacar(Paciente paciente, LinkedList<AgentePatologico> listaDeAgentes);
-    
 }

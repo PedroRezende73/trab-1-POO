@@ -98,13 +98,8 @@ public class Paciente {
         //if(agente.getEnergiaVital()<= 0) System.out.println(agente.getEnergiaVital());
     }
     
-    public int taVivo(){
-        if (this.getLeucocitos() <= 0 || this.getHemacias() <= 0 || this.getCelulasT() <= 0 || this.getCelulasT() <= 0) {
-            return 0;
-
-        } else {
-            return 1;
-        }
+    public boolean taVivo(){
+        return !(this.getLeucocitos() <= 0 || this.getHemacias() <= 0 || this.getCelulasT() <= 0 || this.getCelulasT() <= 0);
     }
 
 }

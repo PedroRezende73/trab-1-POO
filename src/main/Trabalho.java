@@ -25,7 +25,7 @@ public class Trabalho {
         
         System.out.println(Utils.obterClassesMaisInstanciadas(patologias));
 
-        Acao.atacar(paciente, listaAgentes);
+        Acao.iniciarBatalha(paciente, listaAgentes);
 
         /*
         System.out.println(paciente.getLeucocitos());

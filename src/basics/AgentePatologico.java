@@ -36,7 +36,8 @@ public abstract class AgentePatologico {
         this.energia_vital = energia_vital;
     }
     
-    public abstract LinkedList atacar(Paciente paciente, LinkedList<AgentePatologico> listaDeAgentes);
+    public abstract void atacar(Paciente paciente, LinkedList<AgentePatologico> listaDeAgentes);
+    
+    public abstract void morrer(LinkedList<AgentePatologico> listaDeAgentes);
        
-
 }

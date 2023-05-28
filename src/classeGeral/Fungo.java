@@ -23,9 +23,5 @@ public abstract class Fungo extends AgentePatologico{
     public static int getQtdFilhos() {
         return qtdFilhos;
     }
-
-    
-    @Override
-    public abstract LinkedList atacar(Paciente paciente, LinkedList<AgentePatologico> listaDeAgentes);
     
 }

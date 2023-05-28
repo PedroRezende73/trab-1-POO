@@ -19,15 +19,9 @@ public abstract class Virus extends AgentePatologico{
         super(identificacao, energia_vital, "Vírus", classe_especifica);
         qtdFilhos++;
     }
-    
-    
 
     public static int getQtdFilhos() {
         return qtdFilhos;
     }
 
-    
-
-    @Override
-    public abstract LinkedList atacar(Paciente paciente, LinkedList<AgentePatologico> listaDeAgentes);
-}
+ }

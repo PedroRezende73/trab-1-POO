@@ -10,23 +10,39 @@ import java.util.Iterator;
 public class Acao {
     private static int qtdDias = 0;
     
-    public static void atacar(Paciente paciente, LinkedList<AgentePatologico> arrAgentes){
-        AgentePatologico agenteP = null;
+    public static void iniciarBatalha(Paciente paciente, LinkedList<AgentePatologico> arrAgentes){
+        AgentePatologico lastAgente = null;
+   
         LinkedList<AgentePatologico> agentesCopiados = new LinkedList<>(arrAgentes); 
-        //Essa lista é uma cópia da lista original.
-        do {
-            qtdDias++;
-            
+        
+        while(paciente.taVivo() && !arrAgentes.isEmpty()){
             Iterator<AgentePatologico> iterator = agentesCopiados.iterator();
-            //a intenção é trabalhar com a lista copiada durante o loop para evitar a exceção.
+            qtdDias++;
+                        
+            //Output para teste
+            System.out.println("=====CONTADOR=====");
+            System.out.println("Dia "+qtdDias);
+            System.out.println("==================");
+            
             while (iterator.hasNext()) {
                 AgentePatologico agente = iterator.next();
                 
-                agente.atacar(paciente, arrAgentes);
+                //Output para teste
+                System.out.println("_________________________");
+                System.out.println("Identificador: " + agente.getIdentificacao());
+                System.out.println("Energia Vital: " + agente.getEnergiaVital());
+                System.out.println("-------------------------");
                 
-                if(paciente.taVivo() == 1){
-                    paciente.contraAtaque(agente);
-                    agenteP = agente;
+                if(agente.getEnergiaVital() <= 0 && agente.getClasseEspecifica() != "HIV"){
+                    //Output para teste
+                    System.out.println("O Agente Patológico " + agente.getIdentificacao() + " morreu!");
+                    agente.morrer(arrAgentes);
+                }else{
+                    agente.atacar(paciente, arrAgentes);
+                }
+                
+                if(paciente.taVivo()){
+                    lastAgente = agente;
                 }else{
                     System.out.println("O paciente vai morrer");
                     System.out.println("O paciente morre em " + Acao.getQtdDias() + " dias");
@@ -34,19 +50,27 @@ public class Acao {
 
                     return;
                 }
-                
-                if (agente.getEnergiaVital() <= 0 && !"HIV".equals(agente.getClasseEspecifica())) {
-                    iterator.remove();
-                }
             }
             
-        } while (paciente.taVivo() != 0 && !arrAgentes.isEmpty());
-        
-        if(paciente.taVivo() == 1){
+            //Output para teste
+            System.out.println("=======RELATORIO PACIENTE DIA "+qtdDias+"=========");
+            System.out.println("Leucocitos: "+paciente.getLeucocitos());
+            System.out.println("Hemacias: "+paciente.getHemacias());
+            System.out.println("Celulas T: "+paciente.getCelulasT());
+            System.out.println("Celulas K: "+paciente.getCelulasK());
+            System.out.println("========================================");
+
+            
+            agentesCopiados.clear();
+            agentesCopiados.addAll(arrAgentes);
+        }
+
+        if(paciente.taVivo()){
             System.out.println("O paciente vai viver");
             System.out.println("O paciente foi curado em " + Acao.getQtdDias() + " dias");
-            System.out.println("O último agente patológico foi "+agenteP.getIdentificacao());
+            System.out.println("O último agente patológico foi "+lastAgente.getIdentificacao());
         }
+        
     }
 
     public static int getQtdDias() {
