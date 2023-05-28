@@ -38,9 +38,7 @@ public class Estreptococos extends Bacteria {
             if(paciente.taVivo()){
                 paciente.contraAtaque(this);
             }
-            
         }else{
-            System.out.println("Sou um filho e nao posso atacar de primeira, deixa pra próxima");
             this.setIniciarAtacando(true);
         }
     }

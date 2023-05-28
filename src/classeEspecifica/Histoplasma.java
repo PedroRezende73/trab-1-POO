@@ -33,7 +33,7 @@ public class Histoplasma extends Fungo {
             //System.out.println("Encontrei uma Bactéria antes de mim chamanda "+listaDeAgentes.get(index-1).getIdentificacao()+" e ela vai morrer quando sua vez chegar");
         }
         
-        if (index + 1 <= listaDeAgentes.size() && listaDeAgentes.get(index+1) instanceof Bacteria) {
+        if (index + 1 <= listaDeAgentes.size() - 1 && listaDeAgentes.get(index+1) instanceof Bacteria) {
             listaDeAgentes.get(index+1).setEnergiaVital(0);
             //Output para teste
             //System.out.println("Encontrei uma Bactéria depois de mim chamanda "+listaDeAgentes.get(index+1).getIdentificacao()+" e ela vai morrer quando sua vez chegar");
