@@ -7,7 +7,7 @@ import java.util.Iterator;
  *
  * @author Usuario
  */
-public class Acao {
+public abstract class Acao {
     private static int qtdDias = 0;
     
     public static void iniciarBatalha(Paciente paciente, LinkedList<AgentePatologico> arrAgentes){
