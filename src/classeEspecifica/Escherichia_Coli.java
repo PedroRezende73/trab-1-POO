@@ -41,8 +41,8 @@ public class Escherichia_Coli extends Bacteria {
     
     public void gerarFilhos(LinkedList<AgentePatologico> listaDeAgentes){
         Random random = new Random();
-        int index1 = random.nextInt(listaDeAgentes.size() + 1);
-        int index2 = random.nextInt(listaDeAgentes.size() + 1);
+        int index1 = random.nextInt(listaDeAgentes.size());
+        int index2 = random.nextInt(listaDeAgentes.size());
         
         AgentePatologico filha1 = new Escherichia_Coli(this.getIdentificacao()+"child-1", true);
         listaDeAgentes.add(index1, filha1);
@@ -51,7 +51,7 @@ public class Escherichia_Coli extends Bacteria {
         listaDeAgentes.add(index2, filha2);
         
         //Output para teste
-        System.out.println("###Morri mas gerei dois filhos###");
+        //System.out.println("###Morri mas gerei dois filhos###");
     }
     
 }

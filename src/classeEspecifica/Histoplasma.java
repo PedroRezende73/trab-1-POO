@@ -18,21 +18,25 @@ public class Histoplasma extends Fungo {
         paciente.setHemacias(paciente.getHemacias() - 50);
         this.buscaBacteria(listaDeAgentes);
         
+        if(paciente.taVivo()){
+            paciente.contraAtaque(this);
+        }
+        
     }
     
     private void buscaBacteria(LinkedList<AgentePatologico> listaDeAgentes) {
         int index = listaDeAgentes.indexOf(this); 
         
-        if (listaDeAgentes.get(index-1) instanceof Bacteria) {
+        if (index - 1 >= 0 && listaDeAgentes.get(index-1) instanceof Bacteria) {
             listaDeAgentes.get(index-1).setEnergiaVital(0);
             //Output para teste
-            System.out.println("Encontrei uma Bactéria antes de mim chamanda "+listaDeAgentes.get(index-1).getIdentificacao()+" e ela vai morrer quando sua vez chegar");
+            //System.out.println("Encontrei uma Bactéria antes de mim chamanda "+listaDeAgentes.get(index-1).getIdentificacao()+" e ela vai morrer quando sua vez chegar");
         }
         
-        if (listaDeAgentes.get(index+1) instanceof Bacteria) {
+        if (index + 1 <= listaDeAgentes.size() && listaDeAgentes.get(index+1) instanceof Bacteria) {
             listaDeAgentes.get(index+1).setEnergiaVital(0);
             //Output para teste
-            System.out.println("Encontrei uma Bactéria depois de mim chamanda "+listaDeAgentes.get(index+1).getIdentificacao()+" e ela vai morrer quando sua vez chegar");
+            //System.out.println("Encontrei uma Bactéria depois de mim chamanda "+listaDeAgentes.get(index+1).getIdentificacao()+" e ela vai morrer quando sua vez chegar");
         }
         
     }

@@ -20,22 +20,22 @@ public class Acao {
             qtdDias++;
                         
             //Output para teste
-            System.out.println("=====CONTADOR=====");
-            System.out.println("Dia "+qtdDias);
-            System.out.println("==================");
+            //System.out.println("=====CONTADOR=====");
+            //System.out.println("Dia "+qtdDias);
+            //System.out.println("==================");
             
             while (iterator.hasNext()) {
                 AgentePatologico agente = iterator.next();
                 
                 //Output para teste
-                System.out.println("_________________________");
-                System.out.println("Identificador: " + agente.getIdentificacao());
-                System.out.println("Energia Vital: " + agente.getEnergiaVital());
-                System.out.println("-------------------------");
+                //System.out.println("_________________________");
+                //System.out.println("Identificador: " + agente.getIdentificacao());
+                //System.out.println("Energia Vital: " + agente.getEnergiaVital());
+                //System.out.println("-------------------------");
                 
                 if(agente.getEnergiaVital() <= 0 && agente.getClasseEspecifica() != "HIV"){
                     //Output para teste
-                    System.out.println("O Agente Patológico " + agente.getIdentificacao() + " morreu!");
+                    //System.out.println("O Agente Patológico " + agente.getIdentificacao() + " morreu!");
                     agente.morrer(arrAgentes);
                 }else{
                     agente.atacar(paciente, arrAgentes);
@@ -53,12 +53,12 @@ public class Acao {
             }
             
             //Output para teste
-            System.out.println("=======RELATORIO PACIENTE DIA "+qtdDias+"=========");
-            System.out.println("Leucocitos: "+paciente.getLeucocitos());
-            System.out.println("Hemacias: "+paciente.getHemacias());
-            System.out.println("Celulas T: "+paciente.getCelulasT());
-            System.out.println("Celulas K: "+paciente.getCelulasK());
-            System.out.println("========================================");
+            //System.out.println("=======RELATORIO PACIENTE DIA "+qtdDias+"=========");
+            //System.out.println("Leucocitos: "+paciente.getLeucocitos());
+            //System.out.println("Hemacias: "+paciente.getHemacias());
+            //System.out.println("Celulas T: "+paciente.getCelulasT());
+            //System.out.println("Celulas K: "+paciente.getCelulasK());
+            //System.out.println("========================================");
 
             
             agentesCopiados.clear();
