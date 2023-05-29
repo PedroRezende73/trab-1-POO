@@ -26,6 +26,6 @@ public class HIV extends Virus {
     @Override
     public void morrer(LinkedList<AgentePatologico> listaDeAgentes) {
         //Output para teste;
-        System.out.println("Menos eu que sou o Vírus da HIV");
+        //System.out.println("Menos eu que sou o Vírus da HIV");
     }
 }

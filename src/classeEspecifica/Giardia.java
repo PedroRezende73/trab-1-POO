@@ -24,7 +24,7 @@ public class Giardia extends Protozoario{
         if (paciente.getHemacias() >= paciente.getLeucocitos() * 2){
            this.setEnergiaVital(this.getEnergiaVital() + 50);
            //Output para teste
-            System.out.println("Me curei em 50 de Energia Vital pois sou uma Giárdia");
+           //System.out.println("Me curei em 50 de Energia Vital pois sou uma Giárdia");
         }
 
     }
